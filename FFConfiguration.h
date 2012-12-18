@@ -9,6 +9,8 @@
 #import <Foundation/Foundation.h>
 
 @interface FFConfiguration : NSObject
+
 extern NSString *DataPersistenceDatabaseName;
 extern NSString *DataPersistenceManageObjectModel;
+
 @end

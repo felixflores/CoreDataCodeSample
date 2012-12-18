@@ -9,5 +9,7 @@
 #import "FFBook.h"
 
 @interface FFBook (Extension)
+
 - (id)initWithInfo:(NSDictionary *)info;
+
 @end

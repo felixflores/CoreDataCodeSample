@@ -9,6 +9,8 @@
 #import "FFConfiguration.h"
 
 @implementation FFConfiguration
+
 NSString *DataPersistenceDatabaseName = @"CoreDataExample.sqlite";
 NSString *DataPersistenceManageObjectModel = @"CoreDataExample";
+
 @end

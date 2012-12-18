@@ -9,6 +9,7 @@
 #import "FFAddBookViewController.h"
 
 @implementation FFAddBookViewController
+
 NSString *FFBookTitle = @"FFBookTitle";
 NSString *FFBookDescription = @"FFBookDescription";
 
@@ -47,4 +48,5 @@ NSString *FFBookDescription = @"FFBookDescription";
 {
     [[self delegate] addBookViewControllerDidPressCancel:self];
 }
+
 @end

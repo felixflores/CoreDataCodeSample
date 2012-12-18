@@ -9,5 +9,7 @@
 #import <CoreData/CoreData.h>
 
 @interface FFBooksFetchRequest : NSFetchRequest
+
 - (id)initForBooksViewController;
+
 @end

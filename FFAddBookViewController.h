@@ -11,11 +11,14 @@
 @class FFAddBookViewController;
 
 @protocol FFAddBookViewControllerDelegate <NSObject>
+
 - (void)addBookViewController:(FFAddBookViewController *)controller didPressDone:(NSDictionary *)info;
 - (void)addBookViewControllerDidPressCancel:(FFAddBookViewController *)controller;
+
 @end
 
 @interface FFAddBookViewController : UITableViewController
+
 extern NSString *FFBookTitle;
 extern NSString *FFBookDescription;
 
@@ -23,8 +26,9 @@ extern NSString *FFBookDescription;
 
 @property (weak, nonatomic) IBOutlet UITextField *titleTextField;
 @property (weak, nonatomic) IBOutlet UITextView *descriptionTextView;
-
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *doneButton;
+
 - (IBAction)didPressDoneButton:(id)sender;
 - (IBAction)didPressCancelButton:(id)sender;
+
 @end

@@ -10,5 +10,7 @@
 #import "FFAddBookViewController.h"
 
 @interface FFBooksViewController : UITableViewController <FFAddBookViewControllerDelegate>
+
 @property (nonatomic, strong) NSFetchedResultsController *fetchResultsController;
+
 @end

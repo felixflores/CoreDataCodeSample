@@ -9,6 +9,7 @@
 #import "FFBooksFetchRequest.h"
 
 @implementation FFBooksFetchRequest
+
 - (id)initForBooksViewController
 {
     self = [super init];
@@ -27,4 +28,5 @@
     
     return self;
 }
+
 @end

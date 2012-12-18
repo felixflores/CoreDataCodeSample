@@ -23,7 +23,8 @@
     [self setFetchResultsController:nil];
 }
 
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+- (void)prepareForSegue:(UIStoryboardSegue *)segue
+                 sender:(id)sender
 {
     if ([[segue identifier] isEqualToString:@"Add Book Segue"]) {
         UINavigationController *navigationController = [segue destinationViewController];
@@ -41,7 +42,8 @@
     return [sectionInfo numberOfObjects];
 }
 
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+- (UITableViewCell *)tableView:(UITableView *)tableView
+         cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     static NSString *CellIdentifier = @"Book Cell";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
@@ -51,14 +53,16 @@
     return cell;
 }
 
-- (void)configureBookCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath
+- (void)configureBookCell:(UITableViewCell *)cell
+              atIndexPath:(NSIndexPath *)indexPath
 {
     FFBook *book = [[self fetchResultsController] objectAtIndexPath:indexPath];
     [[cell textLabel] setText:[book title]];
     [[cell detailTextLabel] setText:[book desc]];
 }
 
-- (void)addBookViewController:(FFAddBookViewController *)controller didPressDone:(NSDictionary *)info
+- (void)addBookViewController:(FFAddBookViewController *)controller
+                 didPressDone:(NSDictionary *)info
 {
     FFBook *book = [[FFBook alloc] initWithInfo:info];
     [book save];

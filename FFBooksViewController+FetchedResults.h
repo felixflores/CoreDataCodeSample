@@ -9,5 +9,7 @@
 #import "FFBooksViewController.h"
 
 @interface FFBooksViewController (FetchedResults) <NSFetchedResultsControllerDelegate>
+
 - (void)startFetchRequestController;
+
 @end

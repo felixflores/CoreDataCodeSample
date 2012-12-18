@@ -10,6 +10,7 @@
 #import "FFBooksFetchedResultsController.h"
 
 @implementation FFBooksViewController (FetchedResults)
+
 - (void)startFetchRequestController
 {
     [self configureFetchResultsController];
