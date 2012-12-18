@@ -60,10 +60,8 @@
 
 - (void)addBookViewController:(FFAddBookViewController *)controller didPressDone:(NSDictionary *)info
 {
-    FFBook *book = [[FFBook alloc] initInDataPersistenceContext];
-    [book setTitle:info[FFBookTitle]];
-    [book setDesc:info[FFBookDescription]];
-    [[FFDataPersistence sharedInstance] saveContext];
+    FFBook *book = [[FFBook alloc] initWithInfo:info];
+    [book save];
     
     [self dismissViewControllerAnimated:YES completion:nil];
 }

@@ -7,31 +7,17 @@
 //
 
 #import "FFBook+Extension.h"
-#import "FFAddBookViewController.h"
 
 @implementation FFBook (Extension)
-
-- (id)initInDataPersistenceContext
+- (id)initWithInfo:(NSDictionary *)info
 {
-    self = [[FFDataPersistence sharedInstance] entityWithName:@"FFBook"];
+    self = [super initInDataPersistenceContext];
+    
+    if (self) {
+        [self setTitle:info[FFBookTitle]];
+        [self setDesc:info[FFBookDescription]];
+    }
+    
     return self;
 }
-
-+ (NSFetchRequest *)fetchRequestForBooksController
-{
-    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
-    
-    NSEntityDescription *entity = [[FFDataPersistence sharedInstance] entityDescriptionWithName:@"FFBook"];
-    [fetchRequest setEntity:entity];
-    
-    NSSortDescriptor *sort = [[NSSortDescriptor alloc] initWithKey:@"title"
-                                                         ascending:YES];
-    
-    [fetchRequest setSortDescriptors:@[sort]];
-    
-    [fetchRequest setFetchBatchSize:20];
-    
-    return fetchRequest;
-}
-
 @end

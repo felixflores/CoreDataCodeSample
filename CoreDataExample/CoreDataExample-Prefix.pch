@@ -21,7 +21,7 @@
 #import "FFDataPersistence.h"
 #import "FFDataPersistence+Setup.h"
 #import "FFDataPersistence+Saving.h"
-#import "FFDataPersistence+FetchResultsController.h"
+#import "NSManagedObject+FFDataPersistence.h"
 
 #pragma mark - Core Data
 #import "FFBook.h"

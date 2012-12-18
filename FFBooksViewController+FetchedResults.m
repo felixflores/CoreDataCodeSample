@@ -7,6 +7,7 @@
 //
 
 #import "FFBooksViewController+FetchedResults.h"
+#import "FFBooksFetchedResultsController.h"
 
 @implementation FFBooksViewController (FetchedResults)
 - (void)startFetchRequestController
@@ -23,9 +24,7 @@
 
 - (void)configureFetchResultsController
 {
-    NSFetchedResultsController *fetchResultsController =
-    [[FFDataPersistence sharedInstance] fetchResultsControllerWithFetchRequest:[FFBook fetchRequestForBooksController]
-                                                                  andCacheName:@"Books"];
+    FFBooksFetchedResultsController *fetchResultsController = [[FFBooksFetchedResultsController alloc] initForBooksViewController];
     
     [fetchResultsController setDelegate:self];
     [self setFetchResultsController:fetchResultsController];

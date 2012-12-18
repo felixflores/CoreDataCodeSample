@@ -9,6 +9,5 @@
 #import "FFBook.h"
 
 @interface FFBook (Extension)
-- (id)initInDataPersistenceContext;
-+ (NSFetchRequest *)fetchRequestForBooksController;
+- (id)initWithInfo:(NSDictionary *)info;
 @end
