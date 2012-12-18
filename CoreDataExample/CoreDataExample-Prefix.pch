@@ -1,0 +1,31 @@
+//
+// Prefix header for all source files of the 'CoreDataExample' target in the 'CoreDataExample' project
+//
+
+#import <Availability.h>
+
+#ifndef __IPHONE_5_0
+#warning "This project uses features only available in iOS SDK 5.0 and later."
+#endif
+
+#ifdef __OBJC__
+    #import <UIKit/UIKit.h>
+    #import <Foundation/Foundation.h>
+    #import <CoreData/CoreData.h>
+#endif
+
+#pragma mark - Configuration
+#import "FFConfiguration.h"
+
+#pragma mark - Data Persistence
+#import "FFDataPersistence.h"
+#import "FFDataPersistence+Setup.h"
+#import "FFDataPersistence+Saving.h"
+#import "FFDataPersistence+FetchResultsController.h"
+
+#pragma mark - Core Data
+#import "FFBook.h"
+#import "FFBook+Extension.h"
+
+#pragma mark - Books Controller
+#import "FFBooksViewController+FetchedResults.h"
