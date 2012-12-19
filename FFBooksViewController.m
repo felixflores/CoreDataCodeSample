@@ -26,11 +26,23 @@
 - (void)prepareForSegue:(UIStoryboardSegue *)segue
                  sender:(id)sender
 {
-    if ([[segue identifier] isEqualToString:@"Add Book Segue"]) {
+    if ([[segue identifier] isEqualToString:@"AddBook"]) {
         UINavigationController *navigationController = [segue destinationViewController];
         FFAddBookViewController *destinationController = [navigationController viewControllers][0];
         [destinationController setDelegate:self];
     }
+}
+
+- (NSFetchedResultsController *)fetchResultsController
+{
+    if (_fetchResultsController) return _fetchResultsController;
+
+    NSFetchedResultsController *fetchResultsController = [[FFBooksFetchedResultsController alloc] initForBooksAlphabeticalAscending];
+    
+    [_fetchResultsController setDelegate:self];
+    _fetchResultsController = fetchResultsController;
+    
+    return _fetchResultsController;
 }
 
 #pragma mark - Table view data source
@@ -45,7 +57,7 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView
          cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *CellIdentifier = @"Book Cell";
+    static NSString *CellIdentifier = @"Book";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
     
     [self configureBookCell:cell atIndexPath:indexPath];

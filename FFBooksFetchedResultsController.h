@@ -10,6 +10,6 @@
 
 @interface FFBooksFetchedResultsController : NSFetchedResultsController
 
-- (id)initForBooksViewController;
+- (id)initForBooksAlphabeticalAscending;
 
 @end

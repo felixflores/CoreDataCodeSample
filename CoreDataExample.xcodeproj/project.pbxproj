@@ -24,7 +24,6 @@
 		BDAC0B57167F779200C29A0A /* FFDataPersistence.m in Sources */ = {isa = PBXBuildFile; fileRef = BDAC0B52167F779200C29A0A /* FFDataPersistence.m */; };
 		BDAC0B58167F779200C29A0A /* FFDataPersistence+Saving.m in Sources */ = {isa = PBXBuildFile; fileRef = BDAC0B54167F779200C29A0A /* FFDataPersistence+Saving.m */; };
 		BDAC0B59167F779200C29A0A /* FFDataPersistence+Setup.m in Sources */ = {isa = PBXBuildFile; fileRef = BDAC0B56167F779200C29A0A /* FFDataPersistence+Setup.m */; };
-		BDAC0B65167F7A3100C29A0A /* FFConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = BDAC0B64167F7A3100C29A0A /* FFConfiguration.m */; };
 		BDAC0B68167F7D6100C29A0A /* CoreDataExample.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BDAC0B66167F7D6100C29A0A /* CoreDataExample.xcdatamodeld */; };
 		BDAC0B6C167F7DA700C29A0A /* FFBook.m in Sources */ = {isa = PBXBuildFile; fileRef = BDAC0B6B167F7DA700C29A0A /* FFBook.m */; };
 		BDAC0B73167F801200C29A0A /* FFBooksViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BDAC0B72167F801200C29A0A /* FFBooksViewController.m */; };
@@ -60,8 +59,6 @@
 		BDAC0B54167F779200C29A0A /* FFDataPersistence+Saving.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "FFDataPersistence+Saving.m"; sourceTree = "<group>"; };
 		BDAC0B55167F779200C29A0A /* FFDataPersistence+Setup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "FFDataPersistence+Setup.h"; sourceTree = "<group>"; };
 		BDAC0B56167F779200C29A0A /* FFDataPersistence+Setup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "FFDataPersistence+Setup.m"; sourceTree = "<group>"; };
-		BDAC0B63167F7A3100C29A0A /* FFConfiguration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFConfiguration.h; sourceTree = "<group>"; };
-		BDAC0B64167F7A3100C29A0A /* FFConfiguration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFConfiguration.m; sourceTree = "<group>"; };
 		BDAC0B67167F7D6100C29A0A /* CoreDataExample.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CoreDataExample.xcdatamodel; sourceTree = "<group>"; };
 		BDAC0B6A167F7DA700C29A0A /* FFBook.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFBook.h; sourceTree = "<group>"; };
 		BDAC0B6B167F7DA700C29A0A /* FFBook.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFBook.m; sourceTree = "<group>"; };
@@ -121,7 +118,6 @@
 			children = (
 				BDAC0B6D167F7FC200C29A0A /* Books */,
 				BDAC0B69167F7D9800C29A0A /* Model */,
-				BDAC0B62167F7A0600C29A0A /* Configuration */,
 				BD0E0FFE167F70AB00BAF8A2 /* Data Persistence */,
 				BD0E0FE8167F6E6C00BAF8A2 /* FFAppDelegate.h */,
 				BD0E0FE9167F6E6C00BAF8A2 /* FFAppDelegate.m */,
@@ -170,16 +166,6 @@
 				BD31600F168112BA00CF67D6 /* FFBooksFetchRequest.m */,
 			);
 			name = "Support Files";
-			sourceTree = "<group>";
-		};
-		BDAC0B62167F7A0600C29A0A /* Configuration */ = {
-			isa = PBXGroup;
-			children = (
-				BDAC0B63167F7A3100C29A0A /* FFConfiguration.h */,
-				BDAC0B64167F7A3100C29A0A /* FFConfiguration.m */,
-			);
-			name = Configuration;
-			path = ..;
 			sourceTree = "<group>";
 		};
 		BDAC0B69167F7D9800C29A0A /* Model */ = {
@@ -296,7 +282,6 @@
 				BDAC0B57167F779200C29A0A /* FFDataPersistence.m in Sources */,
 				BDAC0B58167F779200C29A0A /* FFDataPersistence+Saving.m in Sources */,
 				BDAC0B59167F779200C29A0A /* FFDataPersistence+Setup.m in Sources */,
-				BDAC0B65167F7A3100C29A0A /* FFConfiguration.m in Sources */,
 				BDAC0B68167F7D6100C29A0A /* CoreDataExample.xcdatamodeld in Sources */,
 				BDAC0B6C167F7DA700C29A0A /* FFBook.m in Sources */,
 				BDAC0B73167F801200C29A0A /* FFBooksViewController.m in Sources */,

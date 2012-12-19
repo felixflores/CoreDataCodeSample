@@ -6,29 +6,19 @@
 //  Copyright (c) 2012 felixflor.es. All rights reserved.
 //
 
-#import "FFBooksViewController+FetchedResults.h"
 #import "FFBooksFetchedResultsController.h"
+#import "FFBooksViewController+FetchedResults.h"
 
 @implementation FFBooksViewController (FetchedResults)
 
 - (void)startFetchRequestController
 {
-    [self configureFetchResultsController];
-    
     NSError *error = nil;
     [[self fetchResultsController] performFetch:&error];
     
     if (error) {
         NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
     }
-}
-
-- (void)configureFetchResultsController
-{
-    FFBooksFetchedResultsController *fetchResultsController = [[FFBooksFetchedResultsController alloc] initForBooksViewController];
-    
-    [fetchResultsController setDelegate:self];
-    [self setFetchResultsController:fetchResultsController];
 }
 
 - (void)controllerWillChangeContent:(NSFetchedResultsController *)controller

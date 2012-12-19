@@ -10,19 +10,15 @@
 
 @implementation FFBooksFetchRequest
 
-- (id)initForBooksViewController
+- (id)initForBooksAlphabeticalAscending
 {
     self = [super init];
     
     if (self) {
-        NSEntityDescription *entity = [[FFDataPersistence sharedInstance] entityDescriptionWithName:@"FFBook"];
-        [self setEntity:entity];
+        NSSortDescriptor *sort = [[NSSortDescriptor alloc] initWithKey:@"title" ascending:NO];
         
-        NSSortDescriptor *sort = [[NSSortDescriptor alloc] initWithKey:@"title"
-                                                             ascending:YES];
-        
+        [self setEntity:[FFBook entityDescription]];
         [self setSortDescriptors:@[sort]];
-        
         [self setFetchBatchSize:20];
     }
     

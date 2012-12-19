@@ -104,7 +104,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Book Cell" textLabel="Pvf-ta-LYR" detailTextLabel="5Eh-WF-Dvn" style="IBUITableViewCellStyleSubtitle" id="udN-DB-fg3">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Book" textLabel="Pvf-ta-LYR" detailTextLabel="5Eh-WF-Dvn" style="IBUITableViewCellStyleSubtitle" id="udN-DB-fg3">
                                 <rect key="frame" x="0.0" y="22" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
@@ -134,7 +134,7 @@
                     <navigationItem key="navigationItem" id="fA0-CU-9ox">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="rQR-Za-Xoy">
                             <connections>
-                                <segue destination="tKH-En-04Z" kind="modal" identifier="Add Book Segue" id="DUS-Ie-Ym6"/>
+                                <segue destination="tKH-En-04Z" kind="modal" identifier="AddBook" id="DUS-Ie-Ym6"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -180,24 +180,6 @@
             <point key="canvasLocation" x="1472" y="-543"/>
         </scene>
     </scenes>
-    <classes>
-        <class className="FFAddBookViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/FFAddBookViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="didPressCancelButton:"/>
-                <relationship kind="action" name="didPressDoneButton:"/>
-                <relationship kind="outlet" name="descriptionTextView" candidateClass="UITextView"/>
-                <relationship kind="outlet" name="doneButton" candidateClass="UIBarButtonItem"/>
-                <relationship kind="outlet" name="titleTextField" candidateClass="UITextField"/>
-            </relationships>
-        </class>
-        <class className="FFBooksViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/FFBooksViewController.h"/>
-        </class>
-        <class className="NSLayoutConstraint" superclassName="NSObject">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

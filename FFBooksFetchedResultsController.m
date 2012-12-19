@@ -11,9 +11,9 @@
 
 @implementation FFBooksFetchedResultsController
 
-- (id)initForBooksViewController
+- (id)initForBooksAlphabeticalAscending
 {
-    self = [super initWithFetchRequest:[[FFBooksFetchRequest alloc] initForBooksViewController]
+    self = [super initWithFetchRequest:[[FFBooksFetchRequest alloc] initForBooksAlphabeticalAscending]
                   managedObjectContext:[[FFDataPersistence sharedInstance] managedObjectContext]
                     sectionNameKeyPath:nil
                              cacheName:@"Books"];

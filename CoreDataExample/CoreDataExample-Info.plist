@@ -36,5 +36,12 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<key>Data Persistence</key>
+	<dict>
+		<key>Database Name</key>
+		<string>CoreDataExample.sqlite</string>
+		<key>Manage Object Model</key>
+		<string>CoreDataExample</string>
+	</dict>
 </dict>
 </plist>

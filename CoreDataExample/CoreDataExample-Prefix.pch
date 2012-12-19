@@ -14,9 +14,6 @@
     #import <CoreData/CoreData.h>
 #endif
 
-#pragma mark - Configuration
-#import "FFConfiguration.h"
-
 #pragma mark - Data Persistence
 #import "FFDataPersistence.h"
 #import "FFDataPersistence+Setup.h"
