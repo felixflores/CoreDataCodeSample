@@ -8,7 +8,6 @@
 
 #import <UIKit/UIKit.h>
 #import "FFAddBookViewController.h"
-#import "FFBooksFetchedResultsController.h"
 
 @interface FFBooksViewController : UITableViewController <FFAddBookViewControllerDelegate>
 

@@ -33,18 +33,6 @@
     }
 }
 
-- (NSFetchedResultsController *)fetchResultsController
-{
-    if (_fetchResultsController) return _fetchResultsController;
-
-    NSFetchedResultsController *fetchResultsController = [[FFBooksFetchedResultsController alloc] initForBooksAlphabeticalAscending];
-    
-    [_fetchResultsController setDelegate:self];
-    _fetchResultsController = fetchResultsController;
-    
-    return _fetchResultsController;
-}
-
 #pragma mark - Table view data source
 
 - (NSInteger)tableView:(UITableView *)tableView

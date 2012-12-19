@@ -15,10 +15,13 @@
     self = [super init];
     
     if (self) {
-        NSSortDescriptor *sort = [[NSSortDescriptor alloc] initWithKey:@"title" ascending:NO];
-        
         [self setEntity:[FFBook entityDescription]];
+        
+        NSSortDescriptor *sort = [[NSSortDescriptor alloc] initWithKey:@"title"
+                                                             ascending:YES
+                                                              selector:@selector(localizedCaseInsensitiveCompare:)];
         [self setSortDescriptors:@[sort]];
+        
         [self setFetchBatchSize:20];
     }
     
