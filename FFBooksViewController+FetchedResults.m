@@ -13,22 +13,12 @@
 
 - (void)startFetchRequestController
 {
-    [self configureFetchResultsController];
-    
     NSError *error = nil;
     [[self fetchResultsController] performFetch:&error];
     
     if (error) {
         NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
     }
-}
-
-- (void)configureFetchResultsController
-{
-    FFBooksFetchedResultsController *fetchResultsController = [[FFBooksFetchedResultsController alloc] initForBooksAlphabeticalAscending];
-    
-    [fetchResultsController setDelegate:self];
-    [self setFetchResultsController:fetchResultsController];
 }
 
 - (void)controllerWillChangeContent:(NSFetchedResultsController *)controller

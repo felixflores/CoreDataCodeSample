@@ -8,6 +8,7 @@
 
 #import "FFBooksViewController.h"
 #import "FFAddBookViewController.h"
+#import "FFBooksFetchedResultsController.h"
 
 @implementation FFBooksViewController
 
@@ -31,6 +32,19 @@
         FFAddBookViewController *destinationController = [navigationController viewControllers][0];
         [destinationController setDelegate:self];
     }
+}
+
+- (NSFetchedResultsController *)fetchResultsController
+{
+    if (!_fetchResultsController) {
+        FFBooksFetchedResultsController *fetchResultsController =
+        [[FFBooksFetchedResultsController alloc] initForBooksAlphabeticalAscending];
+        
+        [fetchResultsController setDelegate:self];
+        _fetchResultsController = fetchResultsController;
+    }
+    
+    return _fetchResultsController;
 }
 
 #pragma mark - Table view data source
