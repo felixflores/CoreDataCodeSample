@@ -62,11 +62,9 @@
 }
 
 - (void)addBookViewController:(FFAddBookViewController *)controller
-                 didPressDone:(NSDictionary *)info
+                 didAddBook:(FFBook *)book
 {
-    FFBook *book = [[FFBook alloc] initWithInfo:info];
     [book save];
-    
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 

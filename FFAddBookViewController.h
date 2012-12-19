@@ -12,15 +12,12 @@
 
 @protocol FFAddBookViewControllerDelegate <NSObject>
 
-- (void)addBookViewController:(FFAddBookViewController *)controller didPressDone:(NSDictionary *)info;
+- (void)addBookViewController:(FFAddBookViewController *)controller didAddBook:(FFBook *)book;
 - (void)addBookViewControllerDidPressCancel:(FFAddBookViewController *)controller;
 
 @end
 
 @interface FFAddBookViewController : UITableViewController
-
-extern NSString *FFBookTitle;
-extern NSString *FFBookDescription;
 
 @property (weak, nonatomic) id <FFAddBookViewControllerDelegate> delegate;
 

@@ -25,7 +25,6 @@
 
 #pragma mark - Core Data
 #import "FFBook.h"
-#import "FFBook+Extension.h"
 
 #pragma mark - Books Controller
 #import "FFBooksViewController+FetchedResults.h"

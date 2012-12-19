@@ -10,9 +10,6 @@
 
 @implementation FFAddBookViewController
 
-NSString *FFBookTitle = @"FFBookTitle";
-NSString *FFBookDescription = @"FFBookDescription";
-
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -30,18 +27,26 @@ NSString *FFBookDescription = @"FFBookDescription";
 
 - (void)toggleDoneButton:(NSNotification *)notification
 {
-    BOOL buttonIsEnabled = [[[self titleTextField] text] length] > 0;
-    [[self doneButton] setEnabled:buttonIsEnabled];
+    BOOL buttonShouldBeEnabled = [[[self titleTextField] text] length] > 0;
+    [[self doneButton] setEnabled:buttonShouldBeEnabled];
 }
 
 - (IBAction)didPressDoneButton:(id)sender
 {
-    NSDictionary *info = @{
-        FFBookTitle : [[self titleTextField] text],
-        FFBookDescription : [[self descriptionTextView] text]
-    };
+    FFBook *book = [self bookFromBasedOnInformationFromView];
+    [[self delegate] addBookViewController:self didAddBook:book];
+}
+
+- (FFBook *)bookFromBasedOnInformationFromView
+{
+    FFBook *book = [[FFBook alloc] initInDataPersistenceContext];
+    NSString *title =  [[self titleTextField] text];
+    NSString *desc =  [[self descriptionTextView] text];
     
-    [[self delegate] addBookViewController:self didPressDone:info];
+    [book setTitle:title];
+    [book setDesc:desc];
+    
+    return book;
 }
 
 - (IBAction)didPressCancelButton:(id)sender

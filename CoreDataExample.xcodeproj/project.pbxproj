@@ -21,7 +21,6 @@
 		BD31600C16810F9D00CF67D6 /* FFBooksFetchedResultsController.m in Sources */ = {isa = PBXBuildFile; fileRef = BD31600B16810F9D00CF67D6 /* FFBooksFetchedResultsController.m */; };
 		BD316010168112BA00CF67D6 /* FFBooksFetchRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = BD31600F168112BA00CF67D6 /* FFBooksFetchRequest.m */; };
 		BD594B1A1681150400097D4D /* NSManagedObject+FFDataPersistence.m in Sources */ = {isa = PBXBuildFile; fileRef = BD594B191681150400097D4D /* NSManagedObject+FFDataPersistence.m */; };
-		BD594B1E1681169F00097D4D /* FFBook+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = BD594B1D1681169F00097D4D /* FFBook+Extension.m */; };
 		BDAC0B57167F779200C29A0A /* FFDataPersistence.m in Sources */ = {isa = PBXBuildFile; fileRef = BDAC0B52167F779200C29A0A /* FFDataPersistence.m */; };
 		BDAC0B58167F779200C29A0A /* FFDataPersistence+Saving.m in Sources */ = {isa = PBXBuildFile; fileRef = BDAC0B54167F779200C29A0A /* FFDataPersistence+Saving.m */; };
 		BDAC0B59167F779200C29A0A /* FFDataPersistence+Setup.m in Sources */ = {isa = PBXBuildFile; fileRef = BDAC0B56167F779200C29A0A /* FFDataPersistence+Setup.m */; };
@@ -55,8 +54,6 @@
 		BD31600F168112BA00CF67D6 /* FFBooksFetchRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFBooksFetchRequest.m; sourceTree = "<group>"; };
 		BD594B181681150400097D4D /* NSManagedObject+FFDataPersistence.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSManagedObject+FFDataPersistence.h"; sourceTree = "<group>"; };
 		BD594B191681150400097D4D /* NSManagedObject+FFDataPersistence.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSManagedObject+FFDataPersistence.m"; sourceTree = "<group>"; };
-		BD594B1C1681169F00097D4D /* FFBook+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "FFBook+Extension.h"; sourceTree = "<group>"; };
-		BD594B1D1681169F00097D4D /* FFBook+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "FFBook+Extension.m"; sourceTree = "<group>"; };
 		BDAC0B51167F779200C29A0A /* FFDataPersistence.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFDataPersistence.h; sourceTree = "<group>"; };
 		BDAC0B52167F779200C29A0A /* FFDataPersistence.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFDataPersistence.m; sourceTree = "<group>"; };
 		BDAC0B53167F779200C29A0A /* FFDataPersistence+Saving.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "FFDataPersistence+Saving.h"; sourceTree = "<group>"; };
@@ -164,31 +161,15 @@
 			path = ..;
 			sourceTree = "<group>";
 		};
-		BD316011168112BF00CF67D6 /* Fetch Results Controller */ = {
+		BD316012168112D600CF67D6 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
 				BD31600A16810F9D00CF67D6 /* FFBooksFetchedResultsController.h */,
 				BD31600B16810F9D00CF67D6 /* FFBooksFetchedResultsController.m */,
-			);
-			name = "Fetch Results Controller";
-			sourceTree = "<group>";
-		};
-		BD316012168112D600CF67D6 /* Fetch Request */ = {
-			isa = PBXGroup;
-			children = (
 				BD31600E168112B900CF67D6 /* FFBooksFetchRequest.h */,
 				BD31600F168112BA00CF67D6 /* FFBooksFetchRequest.m */,
 			);
-			name = "Fetch Request";
-			sourceTree = "<group>";
-		};
-		BD594B1B1681168300097D4D /* Extension */ = {
-			isa = PBXGroup;
-			children = (
-				BD594B1C1681169F00097D4D /* FFBook+Extension.h */,
-				BD594B1D1681169F00097D4D /* FFBook+Extension.m */,
-			);
-			name = Extension;
+			name = "Support Files";
 			sourceTree = "<group>";
 		};
 		BDAC0B62167F7A0600C29A0A /* Configuration */ = {
@@ -207,7 +188,6 @@
 				BDAC0B66167F7D6100C29A0A /* CoreDataExample.xcdatamodeld */,
 				BDAC0B6A167F7DA700C29A0A /* FFBook.h */,
 				BDAC0B6B167F7DA700C29A0A /* FFBook.m */,
-				BD594B1B1681168300097D4D /* Extension */,
 			);
 			name = Model;
 			path = ..;
@@ -218,8 +198,7 @@
 			children = (
 				BDBB5AD91680D863002F4FF0 /* List */,
 				BDBB5ADA1680D86C002F4FF0 /* Add */,
-				BD316011168112BF00CF67D6 /* Fetch Results Controller */,
-				BD316012168112D600CF67D6 /* Fetch Request */,
+				BD316012168112D600CF67D6 /* Support Files */,
 			);
 			name = Books;
 			path = ..;
@@ -326,7 +305,6 @@
 				BD31600C16810F9D00CF67D6 /* FFBooksFetchedResultsController.m in Sources */,
 				BD316010168112BA00CF67D6 /* FFBooksFetchRequest.m in Sources */,
 				BD594B1A1681150400097D4D /* NSManagedObject+FFDataPersistence.m in Sources */,
-				BD594B1E1681169F00097D4D /* FFBook+Extension.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
